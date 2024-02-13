@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Приветственное приложение</title>
+</head>
+<body>
+    <h1>Привет, пользователь Telegram!</h1>
+    <button id="closeApp">Закрыть приложение</button>
+
+    <script>
+      // Проверяем, что Telegram Web App API доступен
+      if (window.Telegram.WebApp) {
+        // Делаем кнопку закрытия приложения активной
+        document.getElementById('closeApp').onclick = function() {
+          Telegram.WebApp.close();
+        };
+      }
+    </script>
+</body>
+</html>
